@@ -16,3 +16,48 @@
   min-height:100vh;
   flex-direction:column;
 }
+.main{
+  width:90%;
+  min-height:300px;
+  flex-wrap:wrap;
+  flex-direction:column;
+}
+.user-box{
+  width:100%;
+  height:auto;
+  gap:30px;
+  flex-wrap:wrap;
+}
+.user{
+  width:200px;
+  height:200px;
+  background:#A8A9B8;
+  border-radius:50%;
+  display:center;
+  justify-content:center;
+  align-items:center;
+}
+
+.user h1{
+  font-size:50px;
+}
+
+.main p{
+  color:white;
+  font-weight:500;
+  background: #7D83C8;
+  padding:10px 20px;
+  margin-top:30px;
+}
+.score{
+  width:90%;
+}
+@media only screen and (max-height:450px){
+  body{
+    background:red;
+  }
+  .user{
+    width:100px;
+    height:100px;
+  }
+}
