@@ -11,9 +11,6 @@
   align-items:center;
   justify-content:center;
 }
-body{
-  
-}
 .container{
   width:100%;
   min-height:100vh;
@@ -65,15 +62,11 @@ body{
 #theme{
   padding:10px;
   position: absolute;
-  top:40px;
-  right:10%
+  top:60px;
+  right:10%;
+  font-size:20px;
 }
-@media only screen and (max-height:450px){
-  body{
-    background:red;
-  }
-  .user{
-    width:100px;
-    height:100px;
-  }
+body.active{
+  background:black;
+  color:white;
 }

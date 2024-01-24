@@ -61,16 +61,14 @@ const showWinner=(userchoice,computerChoice,userwin)=>{
   }
 }
 
-let theme = document.getElementById("theme");
-theme.addEventListener("click", () => {
+let themes = document.getElementById("theme");
+themes.addEventListener("click", () => {
   let body = document.querySelector("body");
-  if (body.style.backgroundColor === "white") {
-    body.style.backgroundColor = "black";
-    body.style.color = "white";
-    theme.innerHTML = "LIGHT";
-  } else if (body.style.backgroundColor === "black") {
-    body.style.backgroundColor = "white";
-    body.style.color = "black";
-    alert('saurav');
-  }
+ body.classList.toggle('active');
+ if(themes.innerHTML=="Dark"){
+   themes.innerHTML="Light"
+ }
+ else if(themes.innerHTML=="Light"){
+   themes.innerHTML="Dark"
+ }
 });
