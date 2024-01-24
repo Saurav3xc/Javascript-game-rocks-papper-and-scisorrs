@@ -2,8 +2,8 @@ let msg=document.getElementById("msg");
 let boxs=document.querySelectorAll(".user");
 let userScore=document.getElementById("user-score");
 let compScore=document.getElementById("comp-score");
-let userboard=0;
-let compboard=0;
+let userboard = 0;
+let compboard = 0;
 boxs.forEach((box)=>{
   box.addEventListener("click",(e)=>{
     let userChoice=box.getAttribute("id");
@@ -14,6 +14,7 @@ boxs.forEach((box)=>{
 
 const genCompchoice=()=>{
   let choice=["rock","papper","scisorrs"];
+  
   let randomNum=Math.floor(Math.random()*choice.length);
   return choice[randomNum];
 }
@@ -48,12 +49,14 @@ const drawgame=()=>{
 const showWinner=(userchoice,computerChoice,userwin)=>{
   if(userwin){
     msg.innerHTML=`You win ${userchoice} beats ${computerChoice}`;
+ 
     userScore.innerHTML=userboard++;
     msg.style.backgroundColor="green"
   }
   else{
     msg.innerHTML=`You lose ${computerChoice} beats ${userchoice}`;
-    compScore.innerHTML=compboard++;
+  
+    compScore.innerText=compboard++;
     msg.style.backgroundColor="red";
   }
 }
