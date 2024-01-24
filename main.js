@@ -60,3 +60,17 @@ const showWinner=(userchoice,computerChoice,userwin)=>{
     msg.style.backgroundColor="red";
   }
 }
+let theme=document.getElementById("theme");
+theme.addEventListener("click",()=>{
+  let body=document.querySelector("body");
+  if(body.style.backgroundColor==="white"){
+    body.style.backgroundColor="black";
+    body.style.color="white";
+    theme.innerHTML="LIGHT"
+  }
+  else if(body.style.backgroundColor==="black"){  body.style.backgroundColor="white";
+    body.style.color="black";
+    alert('saurav')
+  }
+  
+})
